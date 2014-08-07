@@ -15,9 +15,10 @@
 		}).on('jcarousel:scroll', function(event, carousel, target, animate) {
 			$(".jcarousel .selected").removeClass("selected");
 			var v = carousel.fullyvisible();
-			console.log(v);
-			v = v.length > 1 ? v[1] : v[0];
-			$(v).addClass("selected");
+			if(v.length > 1 ){
+				v = target.indexOf('+') >= 0 ? v[2] : v[0];
+				$(v).addClass("selected");
+			}
 		}).jcarousel({
 			wrap: 'circular'
 		});

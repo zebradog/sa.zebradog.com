@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZEBRADOG</title>
 
+<link href="//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css" rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+
 <link href="css/lib/bootstrap.min.css" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,32 +26,79 @@
 </head>
 <body>
 
-<div class="wrapper">
-	<h1>Responsive Carousel</h1>
+<div id="header" class="wrapper">
+	<div class="container">
+		<div class="col-xs-12">
+			<a id="logo" href="#"><img src="img/logo.png" alt="ZEBRADOG"></a>	
+		</div>
+	</div>
+</div>
 
-	<p>This example shows how to implement a responsive carousel. Resize the browser window to see the effect.</p>
+<div id="menu" class="wrapper">
+	<div class="container">
+		<div class="col-sm-4">
+			<a href="#">
+				<h2 class="arabic">تقديم المحتوى</h2>
+				<h3>Project Delivery</h3>
+			</a>
+		</div>
+		<div class="col-sm-4">
+			<a href="#">
+				<h2 class="arabic">تقديم المحتوى</h2>
+				<h3>Content Delivery</h3>
+			</a>
+		</div>
+		<div class="col-sm-4">
+			<a href="#">
+				<h2 class="arabic">تقديم المحتوى</h2>
+				<h3>Team Structure</h3>
+			</a>
+		</div>
 
+	</div>
+</div>
+
+<div id="carousel" class="wrapper">
 	<div class="jcarousel-wrapper">
 		<div class="jcarousel">
 			<ul>
-				<li><img src="http://placehold.it/587x330" alt="Image 1"></li>
+				<li><img src="content/1.jpg" alt="Image 1"></li>
+				<li class="selected">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="//player.vimeo.com/video/75773078?title=0&amp;byline=0&amp;portrait=0&amp;color=ebc55d" width="622" height="350"></iframe> </div>
+				</li>
+				<li><img src="content/2.jpg" alt="Image 3"></li>
+				<li><img src="content/1.jpg" alt="Image 1"></li>
 				<li>
 				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="//player.vimeo.com/video/61827770?title=0&amp;byline=0&amp;portrait=0&amp;color=ebc55d" width="587" height="330"></iframe> </div>
+					<iframe class="embed-responsive-item" src="//player.vimeo.com/video/75773078?title=0&amp;byline=0&amp;portrait=0&amp;color=ebc55d" width="622" height="350"></iframe> </div>
 				</li>
-				<li><img src="http://placehold.it/587x330" alt="Image 3"></li>
-				<li><img src="http://placehold.it/587x330" alt="Image 4"></li>
-				<li><img src="http://placehold.it/587x330" alt="Image 5"></li>
-				<li><img src="http://placehold.it/587x330" alt="Image 6"></li>
+				<li><img src="content/2.jpg" alt="Image 3"></li>
+
 			</ul>
 		</div>
 
-		<a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-		<a href="#" class="jcarousel-control-next">&rsaquo;</a>
-
-		<p class="jcarousel-pagination"></p>
+		<a href="#" class="jcarousel-control-prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		<a href="#" class="jcarousel-control-next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 	</div>
 </div> 
+
+<div id="content" class="wrapper">
+	<div class="container">
+		<div class="col-sm-2 arabic"></div>
+		<div class="col-sm-4 arabic">
+			<h2>هي شركة تصميم</h2>
+
+			<p>ي شركة تصميم ZEBRADOG  متعددةالتخصصات متخصصة في تقديم قصص مدروس، مذكوملهمة لعملائنا في جميع أنحاء العالم. نحن تصور رسالتك بطرق إنشاء اتصالات عاطفية لمدى الحياة.عاطفية لمدى الحياة.متخصصة في تقديم قصص مدروس، مذكوملهمة لعملائنا في جميع أنحاء العالم. نحن تصور رسالتك بطرق إنشاء اتصالات عاطفية لمدى الحياة.عاطفية لمدى الحياة.</p>
+		</div>
+		<div class="col-sm-4">
+			<h2>Project Delivery</h2>
+
+			<p>ZEBRADOG has been successfully delivering immersive brand programming and exhibitory to built environments for over two decades. Our ability to visualize and display our clients core values within their custom environments is our strength. We are a multi-disciplinary design firm delivering the best integrated “storytelling” solutions world wide.</p>
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+</div>
 
 </body>
 </html>
