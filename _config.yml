@@ -1,0 +1,23 @@
+title: ZEBRADOG 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://sa.zebradog.com" 
+permalink: /:categories/:title/
+include: ['_css','_js','_img']
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+gems:
+  - jekyll-redirect-from
+
+# Build settings
+markdown: kramdown

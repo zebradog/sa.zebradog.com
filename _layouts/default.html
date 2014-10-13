@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="{{ page.url | replace: '/','' }}"><div id="container-outer"><div id="container-inner">
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+  </div></div></body>
+
+</html>
