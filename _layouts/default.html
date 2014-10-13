@@ -6,35 +6,9 @@
   <body class="{{ page.url | replace: '/','' }}"><div id="container-outer"><div id="container-inner">
 
     {% include header.html %}
-
-    {% if page.carousel.size > 0 %}
-
-      <div id="carousel" class="wrapper">
-        <div class="jcarousel-wrapper">
-          <div class="jcarousel">
-            <ul>
-
-      {% for i in page.carousel %}
-        
-      <li{% if forloop.index == 2 %} class="selected"{% endif %}>
-        {% if i.image %}
-        <img src="{{ i.image }}" alt="">
-        {% else if i.vimeo %}
-				<div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="//player.vimeo.com/video/{{ i.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=ebc55d" width="622" height="350"></iframe> </div>
-        {% endif %}
-        </li>
-      {% endfor %} 
-
-      			</ul>
-		    </div>
-        <a href="#" class="jcarousel-control-prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-        <a href="#" class="jcarousel-control-next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-      </div>
-    </div> 
-
-    {% endif %}
-
+   
+    {% include carousel.html %}
+    
     <div id="content" class="wrapper">
 	<div class="container">
     <div class="col-sm-2 arabic"></div>
