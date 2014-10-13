@@ -1,53 +1,19 @@
-(function($) {
-	$(function() {
-		var jcarousel = $('.jcarousel');
+(function($) {$(function() {
 
-		jcarousel
-		.on('jcarousel:reload jcarousel:create', function () {
-			var width = jcarousel.innerWidth();
-			if (width >= 600) {
-				width = width / 3;
-			} else if (width >= 350) {
-				width = width;
-			}
+  var $wrapper = $('#wrapper');
+  var $footer = $('#footer');
 
-			jcarousel.jcarousel('items').css('width', width + 'px');
-		}).on('jcarousel:scroll', function(event, carousel, target, animate) {
-			$(".jcarousel .selected").removeClass("selected");
-			var v = carousel.fullyvisible();
-			if(v.length > 1 ){
-				v = target.indexOf('+') >= 0 ? v[2] : v[0];
-				$(v).addClass("selected");
-			}
-		}).jcarousel({
-			wrap: 'circular'
-		});
+  $(window).resize(resize);
 
-	$('.jcarousel-control-prev')
-		.jcarouselControl({
-			target: '-=1'
-		});
+  resize();
 
-	$('.jcarousel-control-next')
-		.jcarouselControl({
-			target: '+=1'
-		});
+  function resize(){
+     var h = $wrapper.height() + $footer.height();
+     if(window.innerHeight < h){
+        $footer.css({position:'relative'});
+     }else{
+        $footer.css({position:'absolute'});
+     }
+  }
 
-	$('.jcarousel-pagination')
-		.on('jcarouselpagination:active', 'a', function() {
-			$(this).addClass('active');
-		})
-	.on('jcarouselpagination:inactive', 'a', function() {
-		$(this).removeClass('active');
-	})
-	.on('click', function(e) {
-		e.preventDefault();
-	})
-	.jcarouselPagination({
-		perPage: 1,
-		item: function(page) {
-			return '<a href="#' + page + '">' + page + '</a>';
-		}
-	});
-	});
-})(jQuery);
+});})(jQuery);

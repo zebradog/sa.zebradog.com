@@ -3,21 +3,20 @@
 
   {% include head.html %}
 
-  <body class="{{ page.url | replace: '/','' }}"><div id="container-outer"><div id="container-inner">
+  <body class="{{ page.url | replace: '/','' }}">
+  <div id="container-outer"><div id="container-inner">
 
-    {% include header.html %}
-   
-    {% include carousel.html %}
-    
-    <div id="content" class="wrapper">
-	<div class="container">
-    <div class="col-sm-2 arabic"></div>
-
-    {{ content }}
-
-    <div class="col-sm-2"></div>
-    	</div>
-</div>
+    <div id="wrapper">
+      {% include header.html %}
+      {% include carousel.html %}
+      <div id="content" class="wrapper">
+        <div class="container">
+          <div class="col-sm-2 arabic"></div>
+            {{ content }}
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+    </div>  
 
     {% include footer.html %}
 
