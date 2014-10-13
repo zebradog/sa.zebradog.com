@@ -137,6 +137,28 @@ h3{
 	padding:1em 0 2em 0;
 }
 
+.banner{
+  height:350px;
+  text-align:center;
+  background-position:bottom center;
+  background-size:cover;
+  border-bottom:1px solid rgba(255,213,84,0.35);
+}
+.banner.skyline{
+  background-image:url(../img/skyline.jpg);
+}
+.banner .partners{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.banner .partners img{
+  width:80%;
+  max-width:928px;
+}
+
 #footer{
   position:absolute;
   height:60px;

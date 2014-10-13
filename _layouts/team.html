@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div id="wrapper">
+  {% include header.html %}
+  <div class="container-fluid skyline banner">
+      <div class="partners">
+        <img src="{{ site.baseurl }}/img/partners.png" alt="">
+       </div>
+  </div>
+  <div id="content" class="wrapper">
+    <div class="container">
+      <div class="col-sm-2 arabic"></div>
+        {{ content }}
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+</div>  
+{% include footer.html %}
