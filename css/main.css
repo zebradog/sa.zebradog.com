@@ -101,6 +101,12 @@ h3{
 	font-size:0.9em;
 }
 
+#menu .active{
+  background-repeat:no-repeat;
+  background-position:bottom center;
+  background-image:url(../img/indicator.png);
+}
+
 .arabic{
 	font-family: 'droid arabic naskh', serif;
 }

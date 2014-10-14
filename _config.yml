@@ -1,6 +1,19 @@
 title: ZEBRADOG 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sa.zebradog.com" 
+navigation:
+  - text:
+      en: Project Delivery
+      sa: تسليم مشروع
+    url: /project/
+  - text:
+      en: Content Delivery
+      sa: تقديم المحتوى
+    url: /content/
+  - text:
+      en: Team Structure
+      sa: هيكل الفريق
+    url: /team/
 permalink: /:categories/:title/
 include: ['_css','_js','_img']
 defaults:
